@@ -10,6 +10,9 @@ export class AppComponent {
   routeArray = ['route1', 'route2'];
   stopArray = ['stop1', 'stop2'];
   directionArray = ['direction1', 'direction2'];
+  selectedRoute: string;
+  selectedStop: string;
+  selectedDirection: string;
 
   constructor(private mbtaService: MbtaService){}
 }

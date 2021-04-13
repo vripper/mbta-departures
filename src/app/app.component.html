@@ -20,7 +20,7 @@
   <p>Choose a train route:</p>
 
   <div class="card-container">
-    <select name="route" id="route" class="card">
+    <select name="route" id="route" [(ngModel)]="selectedRoute" class="card">
       <option *ngFor="let route of routeArray" [value]="route">{{ route }}</option>
     </select>
   </div>
@@ -30,7 +30,7 @@
   <p>Choose a stop on the selected route:</p>
 
   <div class="card-container">
-    <select name="stop" id="stop" class="card">
+    <select name="stop" id="stop" [(ngModel)]="selectedStop" class="card">
       <option *ngFor="let stop of stopArray" [value]="stop">{{ stop }}</option>
     </select>
   </div>
@@ -40,7 +40,7 @@
   <p>Choose a train direction:</p>
 
   <div class="card-container">
-    <select name="direction" id="direction" class="card">
+    <select name="direction" id="direction" [(ngModel)]="selectedDirection" class="card">
       <option *ngFor="let direction of directionArray" [value]="direction">{{ direction }}</option>
     </select>
   </div>
