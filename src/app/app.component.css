@@ -106,9 +106,6 @@ svg.material-icons:not(:last-child) {
   min-width: 30%;
   position: relative;
 }
-.card.card.highlight-card span {
-  margin-left: 60px;
-}
 svg#rocket {
   width: 80px;
   position: absolute;
