@@ -65,6 +65,12 @@ p {
   width: 168px;
   padding: 16px;
 }
+.card.results-card {
+    background-color: #c8d0d3;
+    height: 16px;
+    width: 300px;
+    padding: 16px;
+  }
 .card-container .card:not(.highlight-card) {
   cursor: pointer;
 }
