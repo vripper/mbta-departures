@@ -97,3 +97,7 @@ footer a {
   display: flex;
   align-items: center;
 }
+#submit-button {
+    background-color: #1976d2;
+    color: white;
+}

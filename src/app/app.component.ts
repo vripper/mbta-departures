@@ -14,11 +14,16 @@ export class AppComponent {
   selectedStop: string;
   selectedDirection: string;
   disableStopAndDirection = true;
+  submitted = false;
 
   constructor(private mbtaService: MbtaService){}
 
   getStopsAndDirections() {
     this.disableStopAndDirection = false;
+  }
+
+  onSubmit() {
+    this.submitted = true;
   }
 
 }
