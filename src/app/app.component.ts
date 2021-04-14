@@ -16,6 +16,7 @@ export class AppComponent implements OnInit {
   selectedDirection: string;
   disableStopAndDirection = true;
   submitted = false;
+  nextDeparture = null;
 
   constructor(private mbtaService: MbtaService){}
 
@@ -38,7 +39,11 @@ export class AppComponent implements OnInit {
   }
 
   onSubmit() {
+    if (!!this.selectedStop && !!this.selectedDirection) {
     this.submitted = true;
+      let direction_id = this.directionArray.indexOf(this.selectedDirection).toString();
+      this.mbtaService.getNextDeparture(this.selectedRoute, this.selectedStop, direction_id).subscribe(res => this.nextDeparture = res.data[0].attributes.departure_time);
+    }
   }
 
 }

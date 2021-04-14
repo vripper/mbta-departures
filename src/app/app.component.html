@@ -47,7 +47,7 @@
 
   <!-- Submit Button -->
   <div class="card-container">
-    <button id="submit-button" type="submit" class="card" (ngSubmit)="onSubmit()">Find Next Departure</button>
+    <button id="submit-button" type="submit" class="card" (click)="onSubmit()">Find Next Departure</button>
   </div>
 
 
@@ -56,7 +56,7 @@
 
   <div class="card-container">
     <div class="card card-small">
-      <span>x minutes away</span>
+      <span *ngIf="!!nextDeparture">Departs at {{ nextDeparture }}</span>
     </div>
   </div>
 
