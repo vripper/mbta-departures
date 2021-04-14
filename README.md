@@ -1,4 +1,6 @@
-# MbtaDepartures
+# MBTA Departures
+
+![image](https://user-images.githubusercontent.com/58631413/114722872-2b7f6300-9d08-11eb-8955-d35816a8a1ae.png)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.8.
 
@@ -25,4 +27,3 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# mbta-departures
