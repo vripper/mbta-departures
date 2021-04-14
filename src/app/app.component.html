@@ -21,7 +21,7 @@
 
   <div class="card-container">
     <select name="route" id="route" [(ngModel)]="selectedRoute" class="card" (change)="getStopsAndDirections()">
-      <option *ngFor="let route of routeArray" [value]="route">{{ route }}</option>
+      <option *ngFor="let route of routeArray" [value]="route.id">{{ route.long_name }}</option>
     </select>
   </div>
 
@@ -31,7 +31,7 @@
 
   <div class="card-container">
     <select name="stop" id="stop" [(ngModel)]="selectedStop" class="card" [disabled]="disableStopAndDirection">
-      <option *ngFor="let stop of stopArray" [value]="stop">{{ stop }}</option>
+      <option *ngFor="let stop of stopArray" [value]="stop.id">{{ stop.name }}</option>
     </select>
   </div>
 
