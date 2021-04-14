@@ -13,6 +13,12 @@ export class AppComponent {
   selectedRoute: string;
   selectedStop: string;
   selectedDirection: string;
+  disableStopAndDirection = true;
 
   constructor(private mbtaService: MbtaService){}
+
+  getStopsAndDirections() {
+    this.disableStopAndDirection = false;
+  }
+
 }
