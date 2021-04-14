@@ -20,6 +20,13 @@ export class MbtaService {
   }
 
   getDirections(id: string): Observable<any> {
-    return this.http.get(this.baseURL + '/routes/' + id + '?fields[route]=direction_names');
+    return this.http.get(this.baseURL + '/routes/' + id + '?fields[route]=direction_destinations');
+  }
+
+  getNextDeparture(route_id: string, stop_id: string, direction_id: string): Observable<any> {
+    return this.http.get(this.baseURL + '/predictions?filter[route]' + route_id 
+      + '&filter[stop]=' + stop_id 
+      + '&filter[direction_id]=' + direction_id 
+      + '&page[limit]=1');
   }
 }
