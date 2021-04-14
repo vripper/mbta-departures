@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MbtaService } from './mbta.service';
 
 @Component({
@@ -6,8 +6,8 @@ import { MbtaService } from './mbta.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  routeArray = ['route1', 'route2'];
+export class AppComponent implements OnInit {
+  routeArray = [];
   stopArray = ['stop1', 'stop2'];
   directionArray = ['direction1', 'direction2'];
   selectedRoute: string;
@@ -17,6 +17,14 @@ export class AppComponent {
   submitted = false;
 
   constructor(private mbtaService: MbtaService){}
+
+  ngOnInit() {
+    this.mbtaService.getRoutes().subscribe(res => {
+      res.data.forEach(element => {
+        this.routeArray.push(element.attributes.long_name);
+      });
+    });
+  }
 
   getStopsAndDirections() {
     this.disableStopAndDirection = false;
